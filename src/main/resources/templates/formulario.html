@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title th:text="${titu}">Validando formulario</title>
+	</head>
+	
+	<body>
+		<h1 th:text="${titu}"></h1>
+	
+		<ul>
+			<li th:text="${usuario.name}"></li>
+			<li th:text="${usuario.id}"></li>			
+			<li th:text="${usuario.email}"></li>			
+		</ul>
+	</body>
+
+</html>
