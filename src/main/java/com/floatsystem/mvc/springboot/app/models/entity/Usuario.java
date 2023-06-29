@@ -8,6 +8,7 @@ import java.util.List;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
@@ -43,6 +44,7 @@ public class Usuario implements Serializable {
 	@NotNull
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern = "dd-MM-yyyy")
+	@Column(name="fechacrea")
 	private Date fechaCrea;
 	
 	@OneToMany(mappedBy = "usuario" ,fetch = FetchType.LAZY, cascade = CascadeType.ALL)

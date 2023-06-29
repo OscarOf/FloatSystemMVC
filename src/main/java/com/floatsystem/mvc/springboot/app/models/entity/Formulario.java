@@ -3,6 +3,7 @@ package com.floatsystem.mvc.springboot.app.models.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,7 +20,8 @@ public class Formulario implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	private String nombreForm;
+	@Column(name = "nombreform")
+	private String nombreForm;//Cuidado con crear nombre con mayúsculas intermedias ya que formaria un campo así nombre_form
 	private String ruta;
 	
 	@Temporal(TemporalType.DATE)

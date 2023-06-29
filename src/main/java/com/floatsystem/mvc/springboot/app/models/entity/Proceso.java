@@ -35,7 +35,7 @@ public class Proceso implements Serializable {
 	private Usuario usuario;
 	
 	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinColumn(name = "proceso_id")
+	//@JoinColumn(name = "formulario_id")
 	private List<Formulario> formularios;
 	
 	public Proceso() {
